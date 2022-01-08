@@ -12,7 +12,6 @@ const DATABASE = process.env.MYSQL_DBNAME || "todo4";
 module.exports = new Sequelize(DATABASE, USER, PASSWORD, {
   host: HOST,
   dialect: "mysql",
-  operatorsAliases: false,
   pool: {
     max: 6,
     min: 0,
