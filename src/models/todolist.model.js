@@ -11,13 +11,15 @@ module.exports = DB.define(
     },
     priority: {
       type: DataTypes.ENUM("very-low", "low", "medium", "high", "very-high"),
-      allowNull: false,
+      allowNull: true,
+      defaultValue: "very-high",
     },
     is_active: {
-      type: DataTypes.ENUM("true", "false"),
-      allowNull: false,
+      type: DataTypes.BOOLEAN,
+      allowNull: true,
+      defaultValue: true,
     },
-    activity_id: {
+    activity_group_id: {
       type: DataTypes.BIGINT,
       allowNull: false,
     },
