@@ -21,6 +21,16 @@ cd API-Express-MySQL-Docker
 npm install
 ```
 
+### Make countainer and image for run localy
+
 ```bash
 docker-compose up -d
+```
+
+## OR
+
+### Just build docker image
+
+```bash
+docker build . -t your-docker-user/api-express-mysql-docker
 ```
