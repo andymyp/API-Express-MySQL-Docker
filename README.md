@@ -21,16 +21,16 @@ cd API-Express-MySQL-Docker
 npm install
 ```
 
-### Make countainer and image for run localy
+#### Import `database > todo4.sql` to your phpmyadmin
 
-```bash
-docker-compose up -d
-```
-
-## OR
-
-### Just build docker image
+### Build docker image
 
 ```bash
 docker build . -t your-docker-user/api-express-mysql-docker
+```
+
+### Run
+
+```bash
+docker run -e MYSQL_HOST=localhost -e MYSQL_USER=root -e MYSQL_PASSWORD= -e MYSQL_DBNAME=todo4 -p 3030:3030 your-docker-user/api-express-mysql-docker
 ```
